@@ -26,7 +26,7 @@ class ApprovalsView(viewsets.ModelViewSet):
 	serializer_class = approvalsSerializers
 
 def ohevalue(df):
-	ohe_col=joblib.load("/Book/DjangoApi/DjangoAPI/MyAPI/allcol.pkl")
+	ohe_col=joblib.load("/MyAPI/allcol.pkl")
 	cat_columns=['Gender','Married','Education','Self_Employed','Property_Area']
 	df_processed = pd.get_dummies(df,columns=cat_columns)
 	newdict={}
@@ -40,13 +40,13 @@ def ohevalue(df):
 		
 def approvereject(unit):
 	try:
-		mdl=load_model("/Book/DjangoApi/DjangoAPI/MyAPI/my_model5.h5")
+		mdl=load_model("/MyAPI/my_model5.h5")
 		#mdl=joblib.load("/Book/DjangoApi/DjangoAPI/MyAPI/loan_model.pkl")
 		#mydata=pd.read_excel('/Users/sahityasehgal/Documents/Coding/bankloan/test.xlsx')
 		#mydata=request.data
 		#unit=np.array(list(mydata.values()))
 		#unit=unit.reshape(1,-1)
-		scalers=joblib.load("/Book/DjangoApi/DjangoAPI/MyAPI/scalers.pkl")
+		scalers=joblib.load("/MyAPI/scalers.pkl")
 		X=scalers.transform(unit)
 		y_pred=mdl .predict(X)
 		y_pred=(y_pred>0.58)
