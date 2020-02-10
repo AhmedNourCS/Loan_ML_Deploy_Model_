@@ -11,4 +11,4 @@ This repo objective :
 
 All the model and data can be seen on the repo.
 
-![loanmodel](https://user-images.githubusercontent.com/43713830/74114234-c3a12a00-4be3-11ea-9ede-6d00ac4a5d26.PNG)
+![loan model 1](https://user-images.githubusercontent.com/43713830/74114259-f9461300-4be3-11ea-82f1-3bfa6a053bc1.PNG)
