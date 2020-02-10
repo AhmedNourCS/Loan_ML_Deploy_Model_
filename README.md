@@ -11,4 +11,4 @@ This repo objective :
 
 All the model and data can be seen on the repo.
 
-![](Data/loanmodel.png)
+<img src="Data/loanmodel.png" width=400>
